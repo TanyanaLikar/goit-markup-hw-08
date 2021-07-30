@@ -1,0 +1,23 @@
+@mixin fontStyle($weight, $size, $lineHeidht, $letterSacing, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeidht;
+  letter-spacing: $letterSacing;
+  color: $color;
+}
+
+%list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%logo {
+  display: block;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}

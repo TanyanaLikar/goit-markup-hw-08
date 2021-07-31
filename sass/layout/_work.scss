@@ -2,20 +2,57 @@
   @include fontStyle(700, 14px, 1.14, 0.03em, var(--primary-text-color));
   text-transform: uppercase;
   margin-bottom: 10px;
-}
-// 0-480
-@media screen and (max-width: 480px) {
-  .work__title {
+  @media screen and(max-width: 480px) {
     text-align: center;
   }
 }
+
 .description {
   @include fontStyle(400, 14px, 1.71, 0.03em, var(--secondary-color));
 }
 
-// .work-section {
-//   padding-top: 94px;
-// }
+.work__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.work__item {
+  @media screen and(max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% -120px) / 4);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+.work__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  fill: var(--background-icon);
+  margin-bottom: 30px;
+}
+
 // .work-list {
 //   display: flex;
 //   margin-left: -30px;

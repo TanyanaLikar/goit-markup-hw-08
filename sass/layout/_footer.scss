@@ -4,22 +4,24 @@
   padding-bottom: 60px;
 }
 
-.footer-container {
-  display: flex;
-}
-.footer-list {
-  display: flex;
-}
 .logo-accent {
   color: var(--accent-color);
 }
-.footer-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--white-color);
-  margin-bottom: 20px;
-  margin-top: 12px;
+.social-contakt {
+  text-align: center;
 }
+.footer-title {
+  @include fontStyle(700, 14px, 1.14, 0.03em, var(--white-color));
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+// .footer-container {
+//   display: flex;
+//   justify-content: space-around;
+// }
+// .footer-list {
+//   display: flex;
+// }
+//

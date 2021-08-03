@@ -7,21 +7,77 @@
 .logo-accent {
   color: var(--accent-color);
 }
-.social-contakt {
-  text-align: center;
+.address {
+  font-style: inherit;
 }
+.footer-section {
+  display: flex;
+  margin-bottom: 60px;
+  justify-content: space-around;
+  @media screen and(min-width:1200px) {
+    justify-content: start;
+  }
+}
+
+.logo-contact {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
+.social-contact {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
 .footer-title {
   @include fontStyle(700, 14px, 1.14, 0.03em, var(--white-color));
   text-transform: uppercase;
   margin-bottom: 20px;
-  margin-top: 60px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
 }
 
-// .footer-container {
-//   display: flex;
-//   justify-content: space-around;
-// }
-// .footer-list {
-//   display: flex;
-// }
-//
+.footer-item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
+  }
+}
+.footer-logo-link {
+  @include fontStyle(700, 24px, 1.16, 0.03em, var(--white-color));
+  font-family: var(--secondary-font);
+  margin-bottom: 20px;
+
+  // display: block;
+
+  @media screen and (min-width: 1200px) {
+    @include fontStyle(700, 26px, 1.19, 0.03em, var(--white-color));
+  }
+}
+
+.footer-address {
+  @include fontStyle(400, 14px, 1.71, 0.03em, var(--white-color));
+
+  // display: block;
+}
+.footer-mail,
+.footer-tel {
+  @include fontStyle(400, 14px, 1.71, 0.03em, rgba(255, 255, 255, 0.6));
+
+  // display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-container {
+  @media screen and(min-width:1200px) {
+    display: flex;
+  }
+}

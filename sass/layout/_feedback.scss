@@ -3,6 +3,7 @@
     margin: 0 auto;
     text-align: center;
   }
+  margin-top: 12px;
   margin-left: auto;
 }
 .footer-form-input {
@@ -39,6 +40,7 @@
   border: currentColor;
   @media screen and (min-width: 1200px) {
     margin-left: 12px;
+    margin-top: 0;
   }
 }
 .footer-form-wrapper {

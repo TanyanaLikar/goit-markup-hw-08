@@ -1,18 +1,13 @@
 .modal-form-head {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include fontStyle(700, 20px, 1.5, 0.03em, var(--black-color));
   text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--black-color);
   margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    @include fontStyle(700, 20px, 1.15, 0.03em, var(--black-color));
+  }
 }
 .modal-form-field {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--secondary-color);
+  @include fontStyle(400, 12px, 1.17, 0.01em, var(--secondary-color));
   margin-bottom: 10px;
 }
 .modal-form-input-wrapper {

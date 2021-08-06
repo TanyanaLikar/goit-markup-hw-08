@@ -11,11 +11,15 @@
   font-style: inherit;
 }
 .footer-section {
-  display: flex;
-  margin-bottom: 60px;
-  justify-content: space-around;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: space-around;
+  }
+
   @media screen and(min-width:1200px) {
-    justify-content: start;
+    margin-bottom: 0;
+    align-items: center;
   }
 }
 

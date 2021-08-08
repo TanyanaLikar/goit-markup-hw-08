@@ -14,9 +14,9 @@
 
 .contact__list {
   display: none;
-  // @media screen and(min-width:768px) {
-  //   display: block;
-  // }
+  @media screen and(min-width:768px) {
+    display: block;
+  }
 }
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -34,9 +34,14 @@
 
 .navigation__logo {
   @extend %logo;
-  // margin-right: 93px;
   &--active {
     color: var(--black-color);
+  }
+  @media screen and(min-width:768px) {
+    margin-right: 88px;
+  }
+  @media screen and(min-width:1200px) {
+    margin-right: 93px;
   }
 }
 .burger-btn {
@@ -72,24 +77,31 @@
   }
 }
 
-// .page-header__container,
-// .navigation,
-// .menu {
-//   display: flex;
-//   align-items: center;
-// }
+.navigation {
+  @media screen and(min-width:768px) {
+    display: flex;
+    align-items: center;
+  }
+}
 
-// .menu__item:not(:last-child) {
-//   margin-right: 50px;
-// }
-// .contact__item:not(:last-child) {
-//   margin-right: 50px;
-// }
-// .contact__list {
-//   display: flex;
-//   margin-left: auto;
-//   align-items: center;
-// }
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+.contact__item:not(:last-child) {
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    margin-bottom: 10px;
+  }
+  @media screen and(min-width:1200px) {
+    margin-right: 50px;
+  }
+}
+.contact__list {
+  @media screen and(min-width:1200px) {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+}
 .contact__icon {
   margin-right: 8px;
   fill: var(--secondary-color);
@@ -119,20 +131,20 @@
   }
 }
 
-// .menu__current {
-//   position: relative;
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     bottom: -32px;
-//     display: block;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: var(--accent-color);
-//   }
-// }
+.menu__current {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
+}
 
 .menu__link--current {
   color: var(--accent-color);
@@ -160,8 +172,7 @@
   position: relative;
   padding-top: 48px;
   padding-left: 40px;
-  // left: 50%;
-  // top: 50%;
+
   // width: 480px;
   // height: 800px;
 }
@@ -212,4 +223,9 @@
   display: flex;
   align-items: center;
   margin-top: 64px;
+}
+.mobile-social__item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }

@@ -13,19 +13,20 @@
 .footer-section {
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     justify-content: space-around;
   }
 
   @media screen and(min-width:1200px) {
     margin-bottom: 0;
-    align-items: center;
+    align-items: baseline;
   }
 }
 
 .logo-contact {
   @media screen and (max-width: 1199px) {
     text-align: center;
+    margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
@@ -35,6 +36,7 @@
 .social-contact {
   @media screen and (max-width: 1199px) {
     text-align: center;
+    margin-bottom: 60px;
   }
 }
 
@@ -42,9 +44,6 @@
   @include fontStyle(700, 14px, 1.14, 0.03em, var(--white-color));
   text-transform: uppercase;
   margin-bottom: 20px;
-  @media screen and (max-width: 767px) {
-    margin-top: 60px;
-  }
 }
 
 .footer-item {
@@ -83,5 +82,7 @@
 .footer-container {
   @media screen and(min-width:1200px) {
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
